@@ -1,2 +1,8 @@
-import multiply from './multiply';
-console.log(multiply(2, 3)); // => 2 * 3 = 6
+import API from './api';
+
+const api = new API();
+api.setup();
+// api.getBridges()
+//   .then(data => {
+//     console.log('Bridges: ', data);
+//   });

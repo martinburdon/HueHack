@@ -12,7 +12,7 @@ gulp.task('build', function () {
 });
 
 gulp.task('watch', ['build'], function () {
-  gulp.watch('*.js', ['build']);
+  gulp.watch('src/**/*.js', ['build']);
 });
 
 gulp.task('default', ['watch']);
