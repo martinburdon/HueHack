@@ -6,7 +6,17 @@ export default View.extend({
 
   template,
 
+  regions: {
+    header: 'test-header',
+    main: 'test-main',
+    footer: 'test-footer'
+  },
+
   initialize() {
     console.log('layout init');
+  },
+
+  onAttach() {
+    console.log('Layout onAttach');
   }
 });

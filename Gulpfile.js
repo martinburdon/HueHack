@@ -3,6 +3,7 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 var handlebars = require('gulp-handlebars');
+var hbsfy = require('hbsfy');
 
 gulp.task('build', function () {
   // return browserify({entries: 'src/index.js', extensions: ['.js'], debug: true})
@@ -12,7 +13,8 @@ gulp.task('build', function () {
     debug: true
   })
     .transform('babelify', { presets: ['es2015'] })
-    .transform('browserify-shim')
+    // .transform('browserify-shim')
+    .transform('hbsfy')
     .bundle()
     .on('error', (err) => {
       console.log('ERROR: ', err);
